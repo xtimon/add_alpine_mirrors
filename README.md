@@ -5,10 +5,13 @@
 ```
 FROM alpine
 
+# You shoud install openssl for download from https host
+...
+
 # Adding mirrors
 RUN wget https://raw.githubusercontent.com/xtimon/add_alpine_mirrors/master/add_mirrors.sh \
-    chmod +x add_mirrors.sh \
-    ./add_mirrors.sh
+    && chmod +x add_mirrors.sh \
+    && ./add_mirrors.sh
 ```
 > **Note:**
 
@@ -24,9 +27,12 @@ FROM alpine
 ENV MIRRORS_LIST="http://your_repo_list_address" \
     MIRRORS_COUNT=10
 
+# You shoud install openssl for download from https host
+...
+
 # Adding mirrors
 RUN wget https://raw.githubusercontent.com/xtimon/add_alpine_mirrors/master/add_mirrors.sh \
-    chmod +x add_mirrors.sh \
-    ./add_mirrors.sh
+    && chmod +x add_mirrors.sh \
+    && ./add_mirrors.sh
 ```
 
