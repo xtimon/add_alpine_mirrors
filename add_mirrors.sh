@@ -8,8 +8,8 @@ wget $MIRRORS_LIST -O $TEMP_FILE
 
 for mirror in $(cat $TEMP_FILE)
 do
-  echo ${mirror}/$ALPINE_VERSION/main | sed s"'//'/'" >> /etc/apk/repositories
-  echo ${mirror}/$ALPINE_VERSION/community | sed s"'//'/'" >> /etc/apk/repositories
+  echo "${mirror}/$ALPINE_VERSION/main" | sed s"'//'/'" >> /etc/apk/repositories
+  echo "${mirror}/$ALPINE_VERSION/community" | sed s"'//'/'" >> /etc/apk/repositories
 done
 
 rm $TEMP_FILE $0
